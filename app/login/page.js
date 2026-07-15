@@ -49,7 +49,7 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-paper">
-      {/* Логотип бөлігі - әдемі дизайнмен */}
+      {/* Логотип бөлігі */}
       <div className="relative bg-gradient-to-br from-horizon via-horizon to-horizon-dark px-6 pt-16 pb-20 overflow-hidden">
         {/* Декоративті шеңберлер */}
         <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-32 -translate-y-32 blur-3xl"></div>
@@ -57,28 +57,29 @@ export default function LoginPage() {
         
         {/* Логотип контейнері */}
         <div className="relative z-10 flex flex-col items-center justify-center">
+          {/* Логотип иконкасы - кішірейтілген */}
           <div className="relative group">
             {/* Glow эффект */}
-            <div className="absolute inset-0 bg-white/20 rounded-3xl blur-xl group-hover:bg-white/30 transition-all duration-500"></div>
+            <div className="absolute inset-0 bg-white/20 rounded-full blur-2xl group-hover:bg-white/30 transition-all duration-500 scale-150"></div>
             
-            {/* Логотип */}
-            <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-2xl">
+            {/* Логотип суреті - кіші */}
+            <div className="relative bg-white/15 backdrop-blur-md rounded-full p-4 border border-white/25 shadow-2xl">
               <Image 
                 src="/logo.png" 
                 alt="LOOPIT" 
-                width={180} 
+                width={80} 
                 height={80}
                 priority
-                className="drop-shadow-2xl transform transition-transform duration-500 group-hover:scale-105"
+                className="drop-shadow-xl transform transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
               />
             </div>
           </div>
           
-          {/* Тақырып */}
-          <h1 className="mt-6 font-display font-extrabold text-2xl text-white tracking-wide">
-            LOOPIT
+          {/* LOOPIT жазуы - әдемі шрифтпен */}
+          <h1 className="mt-6 font-display font-extrabold text-4xl text-white tracking-wider">
+            LOOP<span className="text-blue-300">IT</span>
           </h1>
-          <p className="mt-2 text-sm text-white/70">Марафон платформасына қош келдіңіз</p>
+          <p className="mt-3 text-sm text-white/70 font-medium">Марафон платформасына қош келдіңіз</p>
         </div>
       </div>
 
@@ -145,5 +146,3 @@ export default function LoginPage() {
                         </body>
                         </html>
                     
-  );
-}
