@@ -3,9 +3,9 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { getSession } from "@/lib/auth";
+import Image from "next/image";
 
-// Splash — logo + app name only, auto-continues after a beat.
-// If a session already exists we skip straight past login.
+// Splash — логотип көрсетіліп, автоматты түрде әрі қарай өтеді.
 export default function SplashPage() {
   const router = useRouter();
 
@@ -17,12 +17,15 @@ export default function SplashPage() {
   }, [router]);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center gap-4 bg-gradient-to-br from-horizon to-horizon-dark text-white">
-      <div className="h-16 w-16 rounded-3xl bg-white/15 backdrop-blur flex items-center justify-center">
-        <span className="font-display font-extrabold text-2xl">J</span>
-      </div>
-      <h1 className="font-display font-extrabold text-2xl tracking-wide">JUZ40</h1>
-      <div className="h-1 w-1.5 rounded-full bg-white/60 animate-pulse mt-2" />
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Image 
+        src="/logo.png" 
+        alt="LOOPIT" 
+        width={180} 
+        height={180}
+        priority
+        className="drop-shadow-xl animate-pulse"
+      />
     </div>
   );
 }
