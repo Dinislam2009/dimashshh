@@ -1,22 +1,4 @@
-
-                        <!DOCTYPE html>
-                        <html lang="en">
-                        <head>
-                            <meta charset="UTF-8">
-                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <style>
-                body {
-                  background-color: white; /* Ensure the iframe has a white background */
-                }
-
-                
-              </style>
-                        </head>
-                        <body>
-                            
-
-              <script>
-                              "use client";
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -49,20 +31,14 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-paper">
-      {/* Логотип бөлігі */}
       <div className="relative bg-gradient-to-br from-horizon via-horizon to-horizon-dark px-6 pt-16 pb-20 overflow-hidden">
-        {/* Декоративті шеңберлер */}
         <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-32 -translate-y-32 blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full translate-x-48 translate-y-48 blur-3xl"></div>
         
-        {/* Логотип контейнері */}
         <div className="relative z-10 flex flex-col items-center justify-center">
-          {/* Логотип иконкасы - кішірейтілген */}
           <div className="relative group">
-            {/* Glow эффект */}
             <div className="absolute inset-0 bg-white/20 rounded-full blur-2xl group-hover:bg-white/30 transition-all duration-500 scale-150"></div>
             
-            {/* Логотип суреті - кіші */}
             <div className="relative bg-white/15 backdrop-blur-md rounded-full p-4 border border-white/25 shadow-2xl">
               <Image 
                 src="/logo.png" 
@@ -75,7 +51,6 @@ export default function LoginPage() {
             </div>
           </div>
           
-          {/* LOOPIT жазуы - әдемі шрифтпен */}
           <h1 className="mt-6 font-display font-extrabold text-4xl text-white tracking-wider">
             LOOP<span className="text-blue-300">IT</span>
           </h1>
@@ -140,9 +115,3 @@ export default function LoginPage() {
     </div>
   );
 }
-
-
-              </script>
-                        </body>
-                        </html>
-                    
