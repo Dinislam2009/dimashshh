@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/*
+  Design tokens.
+  Brand accent switched to the "Loopit" purple per stakeholder decision.
+  Token names (horizon/steppe/ember...) are kept as-is on purpose — every
+  existing component already references bg-horizon, text-horizon-dark
+  etc, so changing only the hex values here re-themes the whole app
+  without touching component code.
+*/
+@theme {
+  --color-paper: #faf8f4;
+  --color-paper-dim: #f1ede4;
+  --color-ink: #211c17;
+  --color-mist: #8b8478;
+  --color-mist-light: #e8e4dc;
+  --color-horizon: #7c3aed;
+  --color-horizon-dark: #6d28d9;
+  --color-steppe: #3d7a63;
+  --color-steppe-light: #e3f0ea;
+  --color-ember: #c4432e;
+  --color-ember-light: #faeae6;
+  --color-dusk: #1b2430;
+  --color-dusk-light: #2a3644;
+
+  --font-display: var(--font-unbounded), sans-serif;
+  --font-sans: var(--font-golos), sans-serif;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* Keep focus rings visible for keyboard users everywhere in the app. */
+:focus-visible {
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
