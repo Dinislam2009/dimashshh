@@ -30,11 +30,27 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-paper">
-      <div className="bg-gradient-to-br from-horizon to-horizon-dark px-6 pt-14 pb-16 text-white text-center">
-        <div className="h-12 w-12 rounded-2xl bg-white/15 backdrop-blur mx-auto mb-3 flex items-center justify-center">
-          <span className="font-display font-extrabold">J</span>
+      {/* Логотип бөлігі - мәтіндік логотип */}
+      <div className="relative bg-gradient-to-br from-horizon via-horizon to-horizon-dark px-6 pt-20 pb-24 overflow-hidden">
+        {/* Декоративті шеңберлер */}
+        <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-32 -translate-y-32 blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full translate-x-48 translate-y-48 blur-3xl"></div>
+        
+        {/* Мәтіндік логотип */}
+        <div className="relative z-10 flex flex-col items-center justify-center">
+          {/* LOOPIT жазуы - үлкен градиентті шрифтпен */}
+          <h1 className="font-display font-extrabold text-6xl md:text-7xl text-white tracking-tight">
+            LOOP<span className="bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">IT</span>
+          </h1>
+          
+          {/* Астындағы сызық */}
+          <div className="mt-4 w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
+          
+          {/* Сипаттама */}
+          <p className="mt-4 text-base text-white/80 font-medium tracking-wide">
+            Марафон платформасына қош келдіңіз
+          </p>
         </div>
-        <h1 className="font-display font-extrabold text-xl">JUZ40</h1>
       </div>
 
       <div className="flex-1 px-6 -mt-8">
