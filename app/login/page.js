@@ -1,11 +1,29 @@
-"use client";
 
-import Image from "next/image";
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <style>
+                body {
+                  background-color: white; /* Ensure the iframe has a white background */
+                }
+
+                
+              </style>
+                        </head>
+                        <body>
+                            
+
+              <script>
+                              "use client";
+
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Eye, EyeOff } from "lucide-react";
 import { loginUser } from "@/lib/auth";
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 
 export default function LoginPage() {
@@ -31,16 +49,38 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-paper">
-     <div className="bg-gradient-to-br from-horizon to-horizon-dark px-6 pt-14 pb-16 text-white text-center">
-  <Image 
-    src="/logo.png" 
-    alt="LOOPIT" 
-    width={140} 
-    height={60}
-    priority
-    className="mx-auto drop-shadow-lg"
-  />
-</div>
+      {/* Логотип бөлігі - әдемі дизайнмен */}
+      <div className="relative bg-gradient-to-br from-horizon via-horizon to-horizon-dark px-6 pt-16 pb-20 overflow-hidden">
+        {/* Декоративті шеңберлер */}
+        <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-32 -translate-y-32 blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full translate-x-48 translate-y-48 blur-3xl"></div>
+        
+        {/* Логотип контейнері */}
+        <div className="relative z-10 flex flex-col items-center justify-center">
+          <div className="relative group">
+            {/* Glow эффект */}
+            <div className="absolute inset-0 bg-white/20 rounded-3xl blur-xl group-hover:bg-white/30 transition-all duration-500"></div>
+            
+            {/* Логотип */}
+            <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-2xl">
+              <Image 
+                src="/logo.png" 
+                alt="LOOPIT" 
+                width={180} 
+                height={80}
+                priority
+                className="drop-shadow-2xl transform transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+          </div>
+          
+          {/* Тақырып */}
+          <h1 className="mt-6 font-display font-extrabold text-2xl text-white tracking-wide">
+            LOOPIT
+          </h1>
+          <p className="mt-2 text-sm text-white/70">Марафон платформасына қош келдіңіз</p>
+        </div>
+      </div>
 
       <div className="flex-1 px-6 -mt-8">
         <div className="bg-white rounded-3xl shadow-lg border border-mist-light p-6 max-w-sm mx-auto">
@@ -97,5 +137,13 @@ export default function LoginPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+
+              </script>
+                        </body>
+                        </html>
+                    
   );
 }
