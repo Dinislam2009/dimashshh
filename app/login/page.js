@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -30,12 +31,16 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-paper">
-      <div className="bg-gradient-to-br from-horizon to-horizon-dark px-6 pt-14 pb-16 text-white text-center">
-        <div className="h-12 w-12 rounded-2xl bg-white/15 backdrop-blur mx-auto mb-3 flex items-center justify-center">
-          <span className="font-display font-extrabold">J</span>
-        </div>
-        <h1 className="font-display font-extrabold text-xl">JUZ40</h1>
-      </div>
+     <div className="bg-gradient-to-br from-horizon to-horizon-dark px-6 pt-14 pb-16 text-white text-center">
+  <Image 
+    src="/logo.png" 
+    alt="LOOPIT" 
+    width={140} 
+    height={60}
+    priority
+    className="mx-auto drop-shadow-lg"
+  />
+</div>
 
       <div className="flex-1 px-6 -mt-8">
         <div className="bg-white rounded-3xl shadow-lg border border-mist-light p-6 max-w-sm mx-auto">
