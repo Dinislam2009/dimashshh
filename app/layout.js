@@ -14,9 +14,14 @@ const golos = Golos_Text({
   display: "swap",
 });
 
+/** @type {import('next').Metadata} */
 export const metadata = {
-  title: "Марафон платформасы",
-  description: "Марафон және интенсивтер ұйымдастыруға арналған SaaS платформа",
+  title: 'LOOPIT - Марафон платформасы',
+  description: 'Интенсивтер мен марафондарды ұйымдастыру платформасы',
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
+  },
 };
 
 export default function RootLayout({ children }) {
